@@ -33,8 +33,8 @@ def get_iot_news(debug=False):
     if debug:
         print(key)
 
-    link = ('https://newsapi.org/v2/top-headlines?'
-            'country=br&'
+    link = ('https://newsapi.org/v2/everything?'
+            'q=iot&'
             'apiKey=' + key)
     response = requests.get(link)
 
