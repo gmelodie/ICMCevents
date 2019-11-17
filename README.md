@@ -1,5 +1,5 @@
-# cinebot
-Bot for getting the current movies in Cine São Carlos teather
+# ICMCevents
+Bot for getting the current events at ICMC-USP
 
 ## Installation
 Simply `pip install -r requirements.txt`
