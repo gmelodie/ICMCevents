@@ -25,5 +25,10 @@ def get_all_icmc_events():
     return jsonify(scrapper.get_icmc_events())
 
 
+@app.route('/api/news/all', methods=['GET'])
+def get_iot_news():
+    return scrapper.get_iot_news()
+
+
 if __name__ == '__main__':
     app.run(debug=True)

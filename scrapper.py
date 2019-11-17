@@ -1,5 +1,3 @@
-import json
-import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -28,5 +26,24 @@ def get_icmc_events(debug=False):
     return icmc_events
 
 
+def get_iot_news(debug=False):
+    with open('apikey.txt') as f:
+        key = f.read()[:-1] # remove line breaks
+
+    if debug:
+        print(key)
+
+    link = ('https://newsapi.org/v2/top-headlines?'
+            'country=br&'
+            'apiKey=' + key)
+    response = requests.get(link)
+
+    if debug:
+        print(response.json())
+
+    return response.json()
+
+
 if __name__ == '__main__':
     get_icmc_events(debug=True)
+    get_iot_news(debug=True)
